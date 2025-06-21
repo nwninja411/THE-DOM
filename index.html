@@ -3,67 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Information</title>
+    <title>Join the Fellow Ship</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Hero Information</h1>
+        <h1>Travlers Information</h1>
     </header>
-
     <main>
         <section>
-            <h2>Enter Hero Info</h2>
-            <form id="frmHero" name="frmHero">
+            <h2>Enter Travler Info</h2>
+            <form id="frmTravler" name="frmTravler">
                 <!-- Name -->
-                <label for="txtName">Hero Name: </label>
+                <label for="txtName">Travelers Name: </label>
                 <input type="text" id="txtName" name="txtName">
                 <!-- Skills -->
-                <label for="txtSkills">Skills: </label>
-                <input type="text" id="txtSkills" name="txtSkills">
+                <label for="txtKin">Kinship: </label>
+                <input type="text" id="txtKin" name="txtKin">
                 <!-- Health -->
-                <label for="numHealth">Health: </label>
-                <input type="number" id="numHealth" name="numHealth">
+                <label for="numVitality">Vitality: </label>
+                <input type="number" id="numVitality" name="numVitality">
                 <!-- Points -->
-                <label for="numPoints">Points: </label>
-                <input type="number" id="numPoints" name="numPoints">
+                <label for="numHonor">Honor: </label>
+                <input type="number" id="numHonor" name="numHonor">
 
-                <button type="button" onclick="processForm();">Create Hero</button>
+                <button type="button" onclick="processForm();">Create Travler</button>
             </form>
 
-            <h2 id="h2Hero" style="display: none;">Hero Information</h2>
-            <div id="divOutput"></div>
+            <h2 id="h2Travler" style="display: none;">Travlers Information</h2>
+            <div id="divOutput" style="display: none;"></div>
         </section>
     </main>
 
-    <script>
-        //this function will take the input from the form and display on the page
-        function processForm(){
-            //create shortcuts
-            let heroName = document.getElementById("txtName");
-            let Skills = document.getElementById("txtSkills");
-            let Health = document.getElementById("numHealth");
-            let Points = document.getElementById("numPoints");
-
-            //console.log("name=" + heroName.value + "Skills=" + Skills.value + "Health=" + Health.value + "Points=" + Points.value);
-
-            let output = "Hero Name: " + heroName.value + "<BR>" +
-                        "Skills: " + Skills.value + "<BR>" +  
-                        "Health: " + Health.value + "<BR>" +
-                        "Points: " + Points.value;
-
-            //console.log(output);
-
-            document.getElementById("h2Hero").style.display = "block";
-
-            //direct reference to the output
-            document.getElementById("divOutput").innerHTML = output;
-
-            //clear out the form inputs in case the browser does not do it automatically
-            heroName.value = "";
-            Skills.value = "";
-            Health.value = "";
-            Points.value = "";
-        }
-    </script>
+    <script src="travler.js"></script>
 </body>
 </html>
