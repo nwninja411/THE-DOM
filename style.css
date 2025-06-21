@@ -1,0 +1,54 @@
+@font-face {
+/*Here I am naming my font so that I can refernce it*/
+font-family: 'RingBearer';
+/*Here I am linking my font file so that when I refernce it it knows what the font looks like*/
+src: url('RingbearerMedium-51mgZ.ttf') format('truetype');
+/*these tags let the code know that the style and weight should be normal rather than bold or italic*/
+font-weight: normal; 
+font-style: normal; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#dbc7a1;
+    background-color: #20271a;
+    font-family: 'RingBearer', serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 3px solid rgb(105, 75, 55);
+    border-radius: 4px;
+    padding: 1em;
+}
+
+#divOutput {
+    margin-top: 1em;
+    padding: .5em;
+    border: 3px solid rgb(105, 75, 55);
+    border-radius: 4PX;
+    font-size: 1.1em;
+    color: #dbc7a1;
+    line-height: 1.6em;
+}
+
+button{
+    font-family: 'RingBearer', serif;
+    color: #dbc7a1;
+    border-radius: 2px;
+    background-color: rgb(54, 37, 25);
+    border-width: 1px;
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.5);
+    transition: transform .2s ease,box-shadow .2s ease, text-shadow .2s ease;
+    text-shadow: 2px 2px 5px #585144;
+}
